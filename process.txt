@@ -1,0 +1,35 @@
+1. new nestjs-api-tutorial
+2. remove app.controller.spec.ts , app.controller.js , app.services.js
+
+
+//CLI 
+1. Module generate- nest g module user
+
+
+//DOCKER
+1.docker-compose up dev-db -d
+2.docker ps
+3.docker logs 76d99ab01a7f
+
+
+//PRISMA
+
+1.yarn add -D prisma@latest
+2.yarn add @prisma/client
+3. npx prisma init (Create .env and prisma folder in source folder)
+    -After this I added some model in schema.prisma
+4. Update .env acc to docker-compose.yml
+5.For help : npx prisma --help
+
+
+6. npx prisma migrate dev (To run)
+    -Name of migration :- --init (It genrate a folder and some sql)
+
+7. npx prisma generate
+8. npx prisma studio (To Run) It open in localhost-5555 
+
+
+//Now new changes in src Folder
+
+1. nest g module prisma
+2. nest g service prisma --no-spec

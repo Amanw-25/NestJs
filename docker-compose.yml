@@ -1,0 +1,16 @@
+version: '3.8'  # Fixed version, 22.7 doesn't exist for Docker Compose
+
+services:
+  dev-db: 
+    image: postgres:13
+    ports:
+      - "534:5434"  # Corrected port mapping syntax
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - freecodecamp
+
+networks:
+  freecodecamp:
