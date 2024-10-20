@@ -1,10 +1,10 @@
-version: '3.8'  # Fixed version, 22.7 doesn't exist for Docker Compose
+version: '3.8'
 
 services:
-  dev-db: 
+  dev-db:
     image: postgres:13
     ports:
-      - "534:5434"  # Corrected port mapping syntax
+      - "5342:5432"  # Mapping host port 5342 to container port 5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
